@@ -1,3 +1,3 @@
 export default () => (
-    <>Testando</>
+    <main>Testando</main>
 )
