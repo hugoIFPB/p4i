@@ -1,3 +1,9 @@
+:root {
+  --primary-color: #00FF00; /* Ajuste para a cor exata do verde */
+  --background-color: #22212C;
+  --text-color: #FFFFFF;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -8,6 +14,31 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Olney Light', sans-serif;
 }
 
 
+@font-face {
+  font-family: 'Olney Light';
+  src: url('/fonts/olney-light.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+a {
+  color: var(--primary-color);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #00CC00; /* Um verde mais escuro ao passar o mouse */
+}
