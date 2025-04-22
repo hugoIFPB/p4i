@@ -2,7 +2,7 @@ import Image from "next/image";
 import logo from "./logo.jpg"
 
 export default function Header() {
-    return (
+    return ( 
       <header style={{ backgroundColor: '#000',alignItems:"center", columnGap:"100px", display: 'flex', justifyContent: 'flex-start' }}>
         <Image src={logo} alt="IDE.IA Logo" style={{
           height: '100px',         

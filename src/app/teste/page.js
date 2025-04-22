@@ -1,3 +1,5 @@
+import style from "./page.module.css";
+
 export default () => (
-    <main>Testando</main>
+    <main className={style.main}>Testando</main>
 )
