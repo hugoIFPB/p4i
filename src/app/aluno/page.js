@@ -8,7 +8,7 @@ export default async () => {
          alunos.rows.map( 
             a => (
                <div>
-                  {a.name} faz parte do projeto {a.project}
+                  <h2>{a.name}</h2>
                </div>
             ) 
          )
