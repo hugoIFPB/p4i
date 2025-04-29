@@ -18,12 +18,12 @@ export async function POST(request) {
   try {
     const { name, project, startDate } = await request.json()
     const client = await pool.connect()
-    const result = await client.query(
-      'INSERT INTO aluno (name, project, start_date) VALUES ($1, $2, $3) RETURNING *',
+    await client.query(
+      'INSERT INTO aluno (name, project, start_date) VALUES ($1, $2, $3)',
       [name, project, startDate]
     )
     client.release()
-    return NextResponse.json(result.rows[0], { status: 201 })
+    return NextResponse.json({ status: 201 })
   } catch (error) {
     console.error('Error adding aluno:', error)
     return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 })
